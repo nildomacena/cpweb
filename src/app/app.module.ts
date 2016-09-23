@@ -9,7 +9,7 @@ import { NotaFiscalComponent} from './nota-fiscal';
 import { EmpenhoComponent} from './empenho';
 import { ProcessoService} from './services/processo.service';
 import { AngularFireModule } from 'angularfire2';
-import { UserComponent } from './user/user.component';
+import { UserComponent, UserService} from './user';
 
 
 
@@ -31,7 +31,7 @@ export const firebaseConfig = {
         AngularFireModule.initializeApp(firebaseConfig)
     ],
     bootstrap: [AppComponent],
-    providers: [appRoutingProviders, ProcessoService]
+    providers: [appRoutingProviders, ProcessoService, UserService]
 })
 
 export class AppModule{}

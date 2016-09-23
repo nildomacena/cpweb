@@ -1,1 +1,2 @@
-export * from './user-signup.component';
+export * from './user.component';
+export * from './user.service';
