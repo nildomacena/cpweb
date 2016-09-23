@@ -3,6 +3,7 @@ import { Routes, RouterModule} from '@angular/router';
 import { ProcessoComponent}    from './processo';
 import { NotaFiscalComponent}  from './nota-fiscal';
 import { EmpenhoComponent}     from './empenho';
+import { UserSignup}           from './user';
 
 
 const appRoutes: Routes = [ 

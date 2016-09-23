@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class ProcessoService {
-  processos: any [ ] = [ ];
-  constructor() { }
-
-  saveProcesso(processo:any){
-    this.processos.push(processo);
-    console.log(this.processos);
+  listProcessos: FirebaseListObservable <any[]>;
+  constructor(private af: AngularFire) {
+    this.listProcessos = this.af.database.list('/processos');
+  }
+  
+  saveProcesso(processo:any){ 
+    this.listProcessos.push({processo});
   }
 
 }
